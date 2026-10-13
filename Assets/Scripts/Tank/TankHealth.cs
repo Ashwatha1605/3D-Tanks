@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class TankHealth : MonoBehaviour
@@ -43,6 +43,36 @@ public class TankHealth : MonoBehaviour
         if(m_CurrentHealth <=0f && !m_Dead){
             OnDeath();
         }
+    }
+
+
+    public void Heal(float amount)
+    {
+        if (m_Dead) return;
+
+        // Restore health up to maximum starting health
+        m_CurrentHealth += amount;
+        if (m_CurrentHealth > m_StartingHealth)
+        {
+            m_CurrentHealth = m_StartingHealth;
+        }
+
+        SetHealthUI();
+    }
+
+
+    public void ApplyShield(float shieldAmount)
+    {
+        // Temporary shield boost adding to health
+        m_CurrentHealth += shieldAmount;
+        SetHealthUI();
+    }
+
+
+    public bool IsLowHealth(float thresholdPercentage)
+    {
+        // Returns true if current health is below given percentage (0 - 100)
+        return (m_CurrentHealth / m_StartingHealth) <= (thresholdPercentage / 100f);
     }
 
 

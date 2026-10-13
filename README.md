@@ -4,6 +4,20 @@
 
 It was implemented following [Tanks Tutorial](https://learn.unity.com/project/tanks-tutorial) on Unity Learn Platform, it was originally recorded at Unite Boston 2015.
 
+## Controls
+
+| Action | Player 1 | Player 2 |
+| :--- | :--- | :--- |
+| **Move (Forward/Backward)** | `W` / `S` | `Up` / `Down` Arrow |
+| **Turn (Left/Right)** | `A` / `D` | `Left` / `Right` Arrow |
+| **Fire (Hold to charge force)** | `Space` | `Enter` |
+
+## Features
+- **2-Player Local Multiplayer**: Battle against a friend on a single keyboard.
+- **Dynamic Aiming**: Charge up your shot force using the aiming slider.
+- **Audio & Visual Feedback**: Dynamic engine pitch, explosion particle effects, and sound mixing.
+- **Camera Tracking**: Smart multi-target camera that pans and zooms to frame both tanks.
+
 ## Images 
 
 
